@@ -1,0 +1,143 @@
+13/08/2568
+
+สิ่งที่ได้รู้
+JS = functional programing จุดเด่นคือ ตรงไหนที่เก็บข้อมูลได้ มันเก็บฟังก์ชั่นได้ด้วย
+parseInt = ใช้ปัดเศษ
+Math.ceil = ปัดเศษขึ้น
+- object, arrays เก็บvalue คือ referance --> Memory Address = Location ของข้อมูล
+  ตัวมันไม่ได้เก็บข้อมูลโดยตรง = เก็ฐได้ค่าเดียว = Adress ของมัน ---> เข้าถึงข้อมูลที่เก็บ Keys value
+  แปลว่า มันไม่เคยเท่ากันเลย แต่มีเคสเดียวที่เท่ากันคือ เราเอาค่าตัวแปร obj ไปให้อีกตัวโดยบังเอิญ
+  แปลว่า ตอนเรา Compare obj แปลว่าเรากำลัง Compare ที่อยู่ Memory
+  แต่ๆๆๆๆๆ ถ้าเราเขียนเป็น = ตัวเดียว = เราให้มันแชร์ที่ Memที่เดียวกัน
+Unary Operator
+
+Object
+สิ่งที่ได้/สิ่งที่ควรรู้
+- obj ไม่ควรมี Keys ซ้ำ ถ้ามีซ้ำ มันจะเอา Value ตัวสุดท้าย
+- obj ไม่มี Orders ไม่เป็นส่วนสำคัญเหมือน Array
+- จะ Acess Propoty ไหนให้ใส่ Key 
+- Value ของ object เก็บเป็นอะไรก้ได้
+- ในการเข้าถึงข้อมูลต้องเข้าตามลำดับชั้นด้วยการใช้ .
+- Keys เป็น String หรือ Symbols ก็ได้ --> Symbols != String
+  ** Symbols = unique keys (keys ที่ห้ามซ้ำ)
+- JS obj = dinamic เพิ่ม ลด propoty ได้
+Ex. การเพิ่ม 
+pets.dog = {name: 'abc'}
+
+Ex. การลบ
+delete pet.dog
+- JS เป็น implicit ให้โดยที่เราไม่ต้องสร้าง
+
+** การเรียกฟังก์ชั่นแบบอยากได้ผลลัพธ์ ต้องมีวงเล็บในการเรียนฟังก์ชั่นทุกครั้ง () --> การที่มี () แปลว่าเราต้องการส่ง Input parametor
+
+
+Ways to create a JavaScript object
+1. Object literals
+- ใช้ {}
+- ง่าย เร็ว
+ข้อเสีย
+- สร้างหลาย obj ต้องมา repeat structure เอง
+- ใช้คุมการทำงาน obj ที่มีโครงสร้างเดียวกันไม่ค่อยดี --> ใช้ Class แทน
+- ใช้ฟังก์ชันแชร์ ระหว่าง อ็อบเจ็คไม่ได้
+const pets= {name: mongkol, age: 2}
+
+2. Constructor Functions
+จุดสังเกตุ 
+- จะใช้ this 
+- ชื่อ Function จะขึ้นต้นด้วยตัวใหญ๋(Title case)
+ข้อดี
+- สามารถสร้างโดยใช้ Template ได้เลย ไม่ต้องมา repeat code
+- ลดข้อเสียของ Object literals
+- ไม่ยุ่งยากเหมือน Class
+ข้อเสีย
+- ต้องมาคอยให้ความสำคัญกับการดูว่านี้ไม่ใช่ Function ปกติ
+- ต้องสังเกตุดีๆ ใช้บางครั้งอาจจะผิดได้
+- ใช้ฟังก์ชันแชร์ ระหว่าง อ็อบเจ็คไม่ได้
+Ex. Function
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+3. ES6 Classes
+ใช้ class keyword เพื่อกำหนดโครงสร้าง object และ method
+- constructor เอาไว้ กำหนดค่าเริ่มต้นให้ object ตอนที่ใช้ new
+- ถ้าไม่เขียน → JS จะสร้าง constructor เปล่า ๆ ให้อัตโนมัติ
+- เหมาะเมื่อ class ของเราต้องการ property เฉพาะ (เช่น name, age, id)
+- constructor--> รับ Parametor
+- this --> property ของ object จะมีอะไรบ้าง
+- method ของ class เอาไว้กำหนด พฤติกรรม (behavior) ทุก object ที่สร้างจาก class นั้น ๆ จะสามารถเรียกใช้ method ได้
+ช้อดี 
+- คือถ้าเราต้องการสร้างหลายออบเจ็คแล้วมีฟังก์ชันที่ใช้ร่วมกันวิธีนี้ตอบสุด
+
+
+4. object.create()
+เหมาะสำหรับกรณีที่ต้องการ แชร์ method หรือ function ร่วมกันทุก object โดยไม่ต้องเขียนซ้ำในแต่ละ object
+- สร้างตัวPrototype inharit ไปสู่ลูกได้
+- สามารถยืมตัวแม่ แล้วมาเพิ่ม propoty ที่ตัวลุกได้โดยใช้ .
+
+**บางครั้งเขียนใน loop เรียก Keys ไม่ได้
+- ในการเรียก Keys มี 2 Syntax
+1. object.property  ---> ส่วนใหญ่ใช้อันนี้ บางครั้งตัวนี้ใช้ไม่ได้ในบางสถานะการณ์เช่น วนLoop
+2. object["property"] ---> แต่ถ้าอยู่ในลูปแนะนําให้เหลือเป็นแค่ใส่กล้ามปู เพราะว่า object . key ใช้ไม่ได้
+Ex.
+const per1 = {fn: "Nanthakan", ln: "Sukkasem", age: 20}
+console.log(per1.fn)
+console.log(per1["ln"])
+
+for (const key in per1) {
+    console.log(key)
+    console.log(per1.key) // ---> . ตัวแปรไม่ได้ ต้อง . propoty
+    console.log(per1[key])
+}
+
+How tp Conpare obj in JavaScript
+1. ใช้ == , === --> recommend === , object.is() 
+2. Compare ด้วยการ Manual เขียนขึ้นมาเช็คเอง
+
+shallow Equality (สรุปผลการทดลองการเรียนรู้)
+1. ประกาศ book1 และ book2 ออกมามี objectที่เหมือนกันทั้งหมด
+2. ภายในฟังก์ชั่นใช้ Object.keys() เพื่อจะเอาarray ของ key ทั้งหมดใน object
+3. ในส่วนของ if จะเช็คจำนวนของ keys book1และ 2 ว่ามีค่าเท่ากันมั้ย ถ้าไม่เท่ากันจะ return false ทันที
+4. for...of keys1 จะวนลูปดึง ค่าแต่ละตัวใน array keys1 ออกมา
+    ใน if ใช้ key ไปเข้าถึงค่าของ obj1 และ obj2 ---> เทียบค่า property ที่ชื่อเดียวกันขอทั้งสอง obj
+    ถ้าไม่เท่ากันจะ return false ทันที
+5. ถ้าค่าเท่ากันทั้งหมด จะได้ผลเป็น เท่ากับ true
+
+๋JSON
+คล้าย JavaScript obj
+JavaScript obj - เป็น text file ชนิดนึง
+เอาไวติดต่อระหว่าง frontend กับ backend - create update backend --> frontend เราจะแลกเปลี่ยนกับ server ด้วย JSON format
+สิ่งที่ระวัง 
+- ๋JSON ต้องการ "" 
+- JSON เก็บได้ทุกอย่างนอกจาก Function
+
+JSON.Stringify()
+- converts JavaScript --> obj, value
+
+Ways to Check if an Object is Empty
+1. converts = Stringify แล้วเทียบปีกกา
+2. object.keys ->> จะได้ array ของ key
+
+spread in obj
+... = เอาไว้กระจายค่า
+const obj1 = {foo: "bar", x: 42}
+const obj2 = {foo: "baz", y: 13}
+
+const clonedobj = {...obj} // {foo: "bar", x:42}
+const clonedobjWithReplace = {...obj1,foo: 'abc'} // {foo: "abc", x:42}
+const mergedobj = {...obj1,...obj2} // {foo: "baz", x:42, y:13}
+
+Object Destruturing
+ยก Variable ออกจาก Array หรือ Object
+- ต้องระบุ Key ถ้าไม่อยากได้ชื่อนี้ก็จะรุตัวใหม่
+EX. 
+const std = {id: 1, name: "Nanthakan", Address: {no:1111, city: "bangkok"}}
+let {name, id}  = std1 --> เปลี่ยนชื่อตัวแปร  let {name: Fullname, id} 
+console.log(name) 
+console.log(id)
+
+- ...rest 
+เมื่อให้กับ obj ก็จะได้เป็น obj ที่เหลือ
