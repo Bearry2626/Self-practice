@@ -1,0 +1,20 @@
+20/08
+implicit - ทำให้โดยไม่ต้องร้องขอ
+
+
+Javascript
+- เป็นภาษาที่ weakly-typed
+weakly-typed = พร้อมจะแปลงชนิดข้อมูลให้อัตโนมัติ (implicit conversion) เพื่อให้โค้ดเขียนง่ายขึ้น
+ข้อเสียคือ อาจเกิดบั๊กหรือผลลัพธ์ไม่ตรงคาด เพราะมันพยายามแปลงข้อมูลเอง (เช่น "123" == 123 เป็นจริง) ทำให้บาง test case หลุดไป พอ run จริงอาจมีปัญหา
+EX. การแปลงboolean --> string
+Boolean("hello")  // true
+Boolean("")       // false
+Boolean(0)        // false
+Boolean(1)        // true
+Boolean("false")  // true (เพราะ string ไม่ว่าง)
+
+function
+ประกาศครั้งเดียวใช้ได้หลายครั้ว
+มี Paremetor ได้ เป็น locolvarible ภายใน functionนั้น
+- function เป็น first-class citizen
+- return function ได้

@@ -1,0 +1,13 @@
+function getFreqOfQords(sentence){
+    if (sentence == null || undefined) return undefined;
+
+    const words = sentence.toLowerCase().split(" ");
+    freq = {}
+
+    for (let word of words) {
+        freq[word] = freq[word] ? freq[word] + 1 :1
+    }
+    return freq
+}
+
+console.log(getFreqOfQords('Today is present and present is your gift'));
