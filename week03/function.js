@@ -1,14 +1,8 @@
-const sum = (...args) => {
-    return args.reduce((acc, curr) => acc + curr, 0);
-};
-console.log(sum(2,2,3))
-
-//reduce รวมค่า
+// 1. Function declaration
 function sum(a, b){
     return a+b
 }
-const x = sum;
-console.log(x(1,2))
+console.log(1,2)
 
 // 2. function expreeion (arrpw syntax)
 const sum2 = () => a + b
@@ -18,7 +12,7 @@ const sum3 = function(){
     return a + b
 }
 
-// // fucnction --> function --> parametor
+// // fucnction ที่รับ function ไปเป็น parametor
 function process(num, func) {
   return func(num);
 }
@@ -60,8 +54,8 @@ function Test(x) {
 function Test2(x) {
   return x + 50;
 }
-
-console.log(Test(Test2)(5))
+console.log(Test(Test2(10))) // ---> ตอนแรกเพื่อนส่งมาแบบนี้
+console.log(Test(Test2)(5)) // ถ้าอยากส่งฟังค์ชั่น Test2 ไปให้Test เอาtest2 ไปทำงานด้วย
 
 function dosomething(...a){
     let sum = 0;

@@ -1,9 +1,9 @@
 20/08
 implicit - ทำให้โดยไม่ต้องร้องขอ
+Object เก็บvalue เป็น reference (ตำแหน่ง Addres ใน Memmory)
 
 
-Javascript
-- เป็นภาษาที่ weakly-typed
+Javascript- เป็นภาษาที่ weakly-typed
 weakly-typed = พร้อมจะแปลงชนิดข้อมูลให้อัตโนมัติ (implicit conversion) เพื่อให้โค้ดเขียนง่ายขึ้น
 ข้อเสียคือ อาจเกิดบั๊กหรือผลลัพธ์ไม่ตรงคาด เพราะมันพยายามแปลงข้อมูลเอง (เช่น "123" == 123 เป็นจริง) ทำให้บาง test case หลุดไป พอ run จริงอาจมีปัญหา
 EX. การแปลงboolean --> string
@@ -13,8 +13,39 @@ Boolean(0)        // false
 Boolean(1)        // true
 Boolean("false")  // true (เพราะ string ไม่ว่าง)
 
+Callback Function --> คือฟังก์ชันที่ถูกส่งไปเป็น argument ของฟังก์ชันอื่น เพื่อให้ฟังก์ชันนั้น “เรียกกลับมาใช้” ภายหลัง
+
+Higher-Order Function (HOF) --> คือฟังก์ชันที่ รับฟังก์ชันอื่นเป็นพารามิเตอร์ หรือ return ฟังก์ชันออกมา
+1. รับฟังก์ชันเป็นพารามิเตอร์ (argument)
+2. คืนค่า (return) เป็นฟังก์ชัน
+
+EX 
+
+function processUserInput(name, callback) { --> Higher-Order Function
+    console.log("Processing...");
+    callback(name);  --> เรียกใช้ Callback Function
+}
+
+function greet(user) {  ---> function greet = callback function เพราะถูกส่งเข้าไปให้ processUserInput แล้วถูกเรียกใช้ทีหลัง
+    console.log("Hello, " + user);
+}
+
+processUserInput("Nanthakan", greet); --> ส่ง Callback เข้าไปใน HOF
+
+Functional Proh=gramming - ผลลัพธ์ที่อยากได้ให้มันไปจัดการเอง
+imperattive - เป็นการให้คําสั่งทําตามคําสั่ง แจกแจงคำสั่ง
+
+
 function
 ประกาศครั้งเดียวใช้ได้หลายครั้ว
 มี Paremetor ได้ เป็น locolvarible ภายใน functionนั้น
 - function เป็น first-class citizen
 - return function ได้
+- อจ. แนะนำให้เขียนแบบ Camel case (หลังอูฐ)
+- ใส่ปีกกา = ต้องใส่ keyword return เอง
+ถ้า Type of function = จะได้ function
+
+ถ้าเจอ [x1] = คือการ Destructuring - แตกข้อมูลจากอาร์เรย์
+คุณสมบัติในการ Destructuring 
+arrays - ดู Order
+Object - keys

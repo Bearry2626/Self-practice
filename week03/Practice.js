@@ -11,3 +11,9 @@ function getFreqOfQords(sentence){
 }
 
 console.log(getFreqOfQords('Today is present and present is your gift'));
+
+// Chalenge ส่งพารามิเตอร์ได้หลายๆจน.
+const sum = (...args) => {
+    return args.reduce((acc, curr) => acc + curr, 0); //reduce รวมค่า
+};
+console.log(sum(2,2,3))
