@@ -1,0 +1,30 @@
+filter = 
+map = มาใช้ลักษณะที่จะแปลงค่าทุกค่า array / Select poproty ที่ต้องการ
+
+isArray() = เอาไว้ Check ว่าเป็นArrayมั้ย / ให้ผลเป็น Boolean
+
+reverse() - แก้ Original array 
+sort() - default เป็นString เรียน case sensitive ตัวใหญ่ไปตัวเล็ก แล้วค่อยเรียนตัวเล็ก 
+- ถ้าเป็นตัวเลข ควรใช้ compare function (การเปรียบเทียบค่า)
+
+localeCompare - เปรียบเทียบข้อความ (string) ตามลด.Dic 
+*Upercase,lowercase จะใช้ในกรณีที่ Runtime มันสนใจตัวเล็กคัวใหญ๋
+EX. 
+"a".localeCompare("b")   // -1  → "a" มาก่อน "b"
+"b".localeCompare("a")   //  1  → "b" มาหลัง "a"
+"a".localeCompare("a")   //  0  → เท่ากัน
+
+
+รับค่าแบบไหน
+find() - callback function
+indexOf() - Pimitive
+findindex() - callback function
+
+
+ES moduls -แยก code js 
+
+Es moduls expost
+individuls
+list
+
+rename
