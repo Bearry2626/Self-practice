@@ -19,6 +19,7 @@ const array14 = [1, 30, 4 , 21, 10000]
 array14.sort((a,b) => b-a) // compare function 
 console.log(array14)
 
+// เรียงชื่อตามลำดับอักษร ไม่สนใจ case
 const students = [
     {id: 66500102, name:"Sude", gpa:2.5},
     {id: 66500555, name:"ada", gpa:2.8},
@@ -26,7 +27,7 @@ const students = [
     {id: 66500102, name:"Pornsak", gpa:3.8}
 ]
 
-students.sort((a,b) => a.name.localeCompare(b.name))
+students.sort((a,b) => a.name.toLowerCase().localeCompare(b.name))
 console.log(students)
 
 

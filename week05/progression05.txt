@@ -20,6 +20,7 @@ reverse() - แก้ Original array
 
 sort() - default เป็นString เรียน case sensitive ตัวใหญ่ไปตัวเล็ก แล้วค่อยเรียนตัวเล็ก 
 - ถ้าเป็นตัวเลข ควรใช้ compare function (การเปรียบเทียบค่า)
+** การที่เราจะเรียงได้ เราต้องมีความรู้เรื่อง 
 
 
 localeCompare - เปรียบเทียบข้อความ (string) ตามลด.Dic 
@@ -29,7 +30,11 @@ EX.
 "b".localeCompare("a")    1  → "b" มาหลัง "a"
 "a".localeCompare("a")    0  → เท่ากัน
 
+concat - 
 
+indexOf - หา indexแบบ primitive value เจอ return ค่าเป็น index ไม่เจอ -1
+findindex - callback function เขียนว่าอยากหา element แบบบไหน มีการคืนค่าเหมือนกัน
+find - จะคืน element ถ้าไม่มีค่าจะคืนเป็นundefined
 **การรับค่า
 find() - callback function
 indexOf() - Pimitive
