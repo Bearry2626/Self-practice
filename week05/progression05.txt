@@ -1,21 +1,36 @@
 filter = 
+
 map = มาใช้ลักษณะที่จะแปลงค่าทุกค่า array / Select poproty ที่ต้องการ
 
 isArray() = เอาไว้ Check ว่าเป็นArrayมั้ย / ให้ผลเป็น Boolean
 
+includes -  ตรวจสอบว่า ค่าหนึ่งอยู่ใน Array หรือ String หรือไม่
+Ex. String 
+const sentence = "This is a delicious soup!";
+console.log(sentence.includes("soup"));   true  
+console.log(sentence.includes("Soup"));   false เพราะ case sensitive
+**includes() จะคืนค่า true ถ้าพบข้อความที่ต้องการใน string
+Ex. array
+const ingredients = ["onion", "garlic", "bread", "egg"];
+console.log(ingredients.includes("garlic"));   true
+console.log(ingredients.includes("milk"));     false
+**includes() จะคืนค่า true ถ้า element ที่หาอยู่ใน array นั้น
+
 reverse() - แก้ Original array 
+
 sort() - default เป็นString เรียน case sensitive ตัวใหญ่ไปตัวเล็ก แล้วค่อยเรียนตัวเล็ก 
 - ถ้าเป็นตัวเลข ควรใช้ compare function (การเปรียบเทียบค่า)
+
 
 localeCompare - เปรียบเทียบข้อความ (string) ตามลด.Dic 
 *Upercase,lowercase จะใช้ในกรณีที่ Runtime มันสนใจตัวเล็กคัวใหญ๋
 EX. 
-"a".localeCompare("b")   // -1  → "a" มาก่อน "b"
-"b".localeCompare("a")   //  1  → "b" มาหลัง "a"
-"a".localeCompare("a")   //  0  → เท่ากัน
+"a".localeCompare("b")   -1  → "a" มาก่อน "b"
+"b".localeCompare("a")    1  → "b" มาหลัง "a"
+"a".localeCompare("a")    0  → เท่ากัน
 
 
-รับค่าแบบไหน
+**การรับค่า
 find() - callback function
 indexOf() - Pimitive
 findindex() - callback function

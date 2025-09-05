@@ -1,4 +1,4 @@
-
+// Write function getPassingNames that takes an arrays of student objects and returns an arrays of uppercase names of student wgo passes the exam
 function getPassingNames(students) {
   return students.filter(student => student.score >= 70).map(student => student.name.toUpperCase());
 }
