@@ -1,0 +1,44 @@
+week01
+- arrays ในคาบเรียน
+- กลัลมาทำความเข้าใจจากสิ่งที่เรียนไป และดูว่ายังไม่แม่นหรือเข้าใจในส่วนไหน
+- ลองให้แชท Gen โจทย์ออกมาลองทำ
+** ยังต้องเรียนเพิ่มไปอีกเพราะยังไม่แม่นในภาษา ยังงง Systaxอยู่
+
+week02
+- เรียนฟังก์ชั่นการแปลงเป็ฯ จน.เต็ม + ปัดเศษขึ้น
+- object การลบ/การเพิ่ม/การสร้าง
+- ES6 Classes
+- object.create()
+- การเรียก Keys มี 2 Syntax
+- Conpare obj in JavaScript
+- ๋JSON 
+- JSON.Stringify()
+- Ways to Check if an Object is Empty
+- spread in obj
+- Object Destruturing
+*ในคาบที่2 ค่อนข้างเข้าใจมาก เพราะเป็นเรื่องที่เรียนในเทอมที่แล้ว คาบนี้มีสอนในเรื่องของ referrace ด้วย
+
+week03
+- ในคาบที่ 3 จะเป็ฯเรื่องของ function ืำความเข้าใจภาษาว่ามัน weakly-typed
+** weakly-typed ข้อเสียคือมันพยายามแปลงข้อมูลเอง ผลลัพะ์บางครั้งไม่ได้ออกมตามที่คาดหวัง
+-Callback Function  
+- Higher-Order Function (HOF)
+
+week04
+** หนูไม่ได้ทำไว้ค่ะ เพราะหนูป่วยทั้งอาทิตย์เลยค่ะ
+
+week05
+- ในคาบสอนแล้วลองให้เล่น fuction หลายๆ fuction
+** การรับค่าที่แตกต่างกัน
+find() - callback function
+indexOf() - Pimitive
+findindex() - callback function
+
+- Tree Shaking 
+- commonJS
+- ประเภทของ ES MOduls
+-  ประเภทของ ES MOduls มีอะไรบ้างต่างกันยังไง
+- Export individuls  
+- Default Export
+- การ Rename export ที่แตกต่างกัน
+- ตามต่างของการ Rename export import ของทั้ง2 ประเภท

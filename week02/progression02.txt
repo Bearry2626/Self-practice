@@ -2,7 +2,7 @@
 
 สิ่งที่ได้รู้
 JS = functional programing จุดเด่นคือ ตรงไหนที่เก็บข้อมูลได้ มันเก็บฟังก์ชั่นได้ด้วย
-parseInt = ใช้ปัดเศษ
+parseInt = แปลง strig --> inte
 Math.ceil = ปัดเศษขึ้น
 - object, arrays เก็บvalue คือ referance --> Memory Address = Location ของข้อมูล
   ตัวมันไม่ได้เก็บข้อมูลโดยตรง = เก็ฐได้ค่าเดียว = Adress ของมัน ---> เข้าถึงข้อมูลที่เก็บ Keys value
@@ -11,7 +11,7 @@ Math.ceil = ปัดเศษขึ้น
   แต่ๆๆๆๆๆ ถ้าเราเขียนเป็น = ตัวเดียว = เราให้มันแชร์ที่ Memที่เดียวกัน
 Unary Operator
 
-Object
+ก
 สิ่งที่ได้/สิ่งที่ควรรู้
 - obj ไม่ควรมี Keys ซ้ำ ถ้ามีซ้ำ มันจะเอา Value ตัวสุดท้าย
 - obj ไม่มี Orders ไม่เป็นส่วนสำคัญเหมือน Array

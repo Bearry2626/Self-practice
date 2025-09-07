@@ -1,4 +1,4 @@
-filter = 
+filter = อาไว้ กรอง (filter) ข้อมูลใน array ตามเงื่อนไข
 
 map = มาใช้ลักษณะที่จะแปลงค่าทุกค่า array / Select poproty ที่ต้องการ
 
@@ -10,6 +10,7 @@ const sentence = "This is a delicious soup!";
 console.log(sentence.includes("soup"));   true  
 console.log(sentence.includes("Soup"));   false เพราะ case sensitive
 **includes() จะคืนค่า true ถ้าพบข้อความที่ต้องการใน string
+
 Ex. array
 const ingredients = ["onion", "garlic", "bread", "egg"];
 console.log(ingredients.includes("garlic"));   true
@@ -30,7 +31,7 @@ EX.
 "b".localeCompare("a")    1  → "b" มาหลัง "a"
 "a".localeCompare("a")    0  → เท่ากัน
 
-concat - 
+concat - ต่อ string
 
 indexOf - หา indexแบบ primitive value เจอ return ค่าเป็น index ไม่เจอ -1
 findindex - callback function เขียนว่าอยากหา element แบบบไหน มีการคืนค่าเหมือนกัน
@@ -40,11 +41,35 @@ find() - callback function
 indexOf() - Pimitive
 findindex() - callback function
 
+Tree Shaking - เหมือนเขย่าดูว่าตรงไหนว่าเราไม่ได้ใช้ จะทำงานได้ดีใน local 
+commonJS - รันด้วย node ใช้ require() ถ้าจะ import export จะใช้ module.export
+* 1 unit
 
-ES moduls -แยก code js 
+*ถ้ามาก 1 unit บังคับเป็็น object systax -> destutur เท่าที่อยากจะใช้
 
+ES MOduls - จะใช้ keys word import export เลย ใช้กับ borwser
+- runผ่านไฟล์ html ใชเ type = "moduls"
+มี2 ประเภท
+- Names Export - บังคับชื่อมีหรือไม่มี มีมากกว่า 1 ก้ได้
+- Default Export -เปลี่ยนชื่อได้ 1 ไฟล์มีได้ 1 default export
+** รุ่นก่อนหน้านี้ต้องปรับนามสกุล js - mjs
+
+ES moduls - แยก code js ออกเป็นไฟล์ 1 ไฟล์ = 1 moduls
 Es moduls expost
-individuls
-list
+individuls - การส่งออก หลายๆ ตัวแยกกัน ในไฟล์เดียว (export by items)
+* ส่งเป็น Names export ไม่ต้องใส่ default
+ข้อดี - อยากได้อะไรก็จิ้ม
+ข้อเสีย - ถ้าไฟล์ใหญ่ทำให้ดูยาก
 
-rename
+list - ข้อเสียคือ ไม่เห็นมัน by items ไม่รนู้ export มั้ย แต่มาสรุปช่วงท้ายดูภาพรวมได้
+
+Rename export
+export {vl1 as name}
+- เวลา export ออกไป จะต้องใช้ชื่อเดิม (name เดียวกัน)
+- เวลา import ต้องเรียกชื่อให้ตรงเป๊ะ
+- ถ้าอยากเปลี่ยนชื่อขาเข้า (ตอน import) ต้องใช้ as
+
+export {name as default}
+- export ได้ ตัวเดียวต่อหนึ่งไฟล์
+- เวลา import ตั้งชื่ออะไรก็ได้ ไม่ต้องตรงกับไฟล์ต้นทาง
+Default export - มีได้แค่ 1

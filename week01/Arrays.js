@@ -1,5 +1,3 @@
-
-
 const somthing = ["cat", 10, 11.1, true];
 
 console.log(somthing.length)
